@@ -43,10 +43,12 @@ export class HomeComponent implements OnInit {
   //Metodos redes sociales
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+    this.route.navigate(['user']);
   }
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+    this.route.navigate(['user']);
   }
 
   signOut(): void {

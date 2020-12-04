@@ -25,10 +25,17 @@ export class UserComponent implements OnInit {
 
     this.admin = this._data.getService();
     this.usuario = this.admin['usuario'];
+
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    });
     
   }
 
-  logout(){
+  signOut(): void {
+    
+      this.authService.signOut();
       this.route.navigate(['']);
   }
 

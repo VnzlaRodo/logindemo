@@ -5,14 +5,19 @@
             <div *ngIf="user">
                 <img src="{{ user.photoUrl }}">
                 <div>
-                    <h4>{{ user.name }}a</h4>
+                    <h4>Bienvenido: {{ user.name }}a</h4>
                     <p>{{ user.email }}a</p>
                 </div>
             </div>
 
-            <p class="h1 text-center py-5">Bienvenido: {{ usuario }}</p>
+            <div *ngIf="!user">
+                <img class="img-fluid border p-1" style="height: 10vh;" src="assets/img/avatar.svg">
 
-            <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+                <p class="h1 text-center py-5">Bienvenido: {{ usuario }}</p>
+
+            </div>
+
+            <button class="btn btn-danger" (click)="signOut()">Cerrar Sesión</button>
 
         </div>
         <div class="col"></div>
