@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialAuthService, SocialUser } from 'angularx-social-login';
 import { UsersService } from '../../services/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -17,13 +18,18 @@ export class UserComponent implements OnInit {
   
   
   constructor( private authService: SocialAuthService,
-               private _data: UsersService ) { }
+               private _data: UsersService,
+                private route: Router ) { }
 
   ngOnInit(): void {
 
     this.admin = this._data.getService();
     this.usuario = this.admin['usuario'];
     
+  }
+
+  logout(){
+      this.route.navigate(['']);
   }
 
 }

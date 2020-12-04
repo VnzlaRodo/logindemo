@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row align-items-center border" style="height: 100vh;">
+    <div class="row align-items-center border animated fadeIn" style="height: 100vh;">
         <div class="col"></div>
         <div class="col-6 p-5 align-self-center border border-primary">
             <button class="btn btn-light btn-block" (click)="signOut()">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="alert alert-danger text-center" *ngIf="error">Error</div>
+                <div class="alert alert-danger text-center animated fadeIn fast" *ngIf="error">Error, campos invalidos o vacios</div>
 
                 <button type="submit" class="btn btn-success btn-block">Ingresar</button>
             </form>

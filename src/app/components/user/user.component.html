@@ -1,16 +1,20 @@
 <div class="container">
-    <div class="row align-items-center border colores" style="height: 100vh;">
-        <div class="col">
+    <div class="row align-items-center border" style="height: 100vh;">
+        <div class="col"></div>
+        <div class="col-6 text-center colores pt-5 rounded animated fadeIn" style="height: 50vh;">
             <div *ngIf="user">
                 <img src="{{ user.photoUrl }}">
                 <div>
-                    <h4>{{ user.name }}</h4>
-                    <p>{{ user.email }}</p>
+                    <h4>{{ user.name }}a</h4>
+                    <p>{{ user.email }}a</p>
                 </div>
             </div>
 
-            <p class="h1 text-center">Bienvenido {{ usuario }}</p>
+            <p class="h1 text-center py-5">Bienvenido: {{ usuario }}</p>
+
+            <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
 
         </div>
+        <div class="col"></div>
     </div>
 </div>
