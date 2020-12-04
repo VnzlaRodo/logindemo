@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row align-items-center border colores" style="height: 100vh;">
+        <div class="col">
+            <div *ngIf="user">
+                <img src="{{ user.photoUrl }}">
+                <div>
+                    <h4>{{ user.name }}</h4>
+                    <p>{{ user.email }}</p>
+                </div>
+            </div>
+
+            <p class="h1 text-center">Bienvenido {{ usuario }}</p>
+
+        </div>
+    </div>
+</div>
